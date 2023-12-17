@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AcousticWaveTransmitter : MonoBehaviour
 {
-    [HideInInspector] public float WaveFrequency;
-    [HideInInspector] public float WavePower;
-    [HideInInspector] public float WaveImpedance;
+    [HideInInspector] public float WaveFrequency = 0f;
+    [HideInInspector] public float WavePower = 0f;
+    [HideInInspector] public float WaveImpedance = 0f;
 
     // Start is called before the first frame update
     void Start()

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SceneInputs : MonoBehaviour
 {
-    [SerializeField] public float Frequency;
-    [SerializeField] public float CarSpeed;
-    [SerializeField] public float AcousticWavePower;
-    [SerializeField] public float AcousticWaveImpedance;
+    [SerializeField] public float Frequency = 0f;
+    [SerializeField] public float CarSpeed = 0f;
+    [SerializeField] public float AcousticWavePower = 0f;
+    [SerializeField] public float AcousticWaveImpedance = 0f;
 
     // Start is called before the first frame update
     void Start()

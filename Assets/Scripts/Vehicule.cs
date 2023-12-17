@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Vehicule : MonoBehaviour
 {
-    [HideInInspector] public float Speed;
-    [HideInInspector] public AcousticWaveTransmitter WaveTransmitter;
+    [HideInInspector] public float Speed = 0f;
+    [SerializeField] public AcousticWaveTransmitter WaveTransmitter = null;
 
     // Start is called before the first frame update
     void Start()

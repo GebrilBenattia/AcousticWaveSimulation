@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class Simulation : MonoBehaviour
 {
-    [SerializeField] private SceneInputs m_Inputs;
-    [SerializeField] private Vehicule m_Car;
+    [SerializeField] private SceneInputs m_Inputs = null;
+    [SerializeField] private Vehicule m_Car = null;
     [SerializeField] private Observator[] m_Observators = null;
 
-    private const float m_AirImpedance = 414f;
-    private const float m_WaveCelerityInAir = 343f;
+    private const float m_AirImpedance = 414f; // Pa s/m
+    private const float m_WaveCelerityInAir = 343f; // m/s
 
-    [SerializeField] public float Transmission;
+    [SerializeField] public float Transmission = 0f;
 
     private const float m_I0 = 1.1e-12f;
 
@@ -25,8 +25,6 @@ public class Simulation : MonoBehaviour
         //m_Car.WaveTransmitter.WaveImpedance = m_Inputs.AcousticWaveImpedance;
 
         m_Observators[0].LastDistanceFromVehicule = Vector3.Distance(m_Car.transform.position, m_Observators[0].transform.position);
-
-        Transmission = 0f;
     }
 
     float GetTransmission()
