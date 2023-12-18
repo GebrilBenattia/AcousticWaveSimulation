@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Sinewave : MonoBehaviour
 {
+    public GameObject Pos;
+
     public LineRenderer myLineRenderer;
     public int points;
     public float amplitude = 1;
@@ -33,6 +35,7 @@ public class Sinewave : MonoBehaviour
 
     void Update()
     {
+        transform.position = Pos.transform.position;
         Draw();
     }
 }

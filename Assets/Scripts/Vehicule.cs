@@ -9,6 +9,8 @@ public class Vehicule : MonoBehaviour
     [SerializeField] public AcousticWaveTransmitter WaveTransmitter = null;
     [SerializeField] private Light m_Light = null;
 
+    public GameObject StartPosObject;
+
     public float minIntensity = 0f; 
     public float maxIntensity = 300f;
     public float frequency = 1f;
@@ -20,6 +22,11 @@ public class Vehicule : MonoBehaviour
 
         m_Light.intensity = intensity;
 
-        transform.position += new Vector3(Speed * -1f * Time.deltaTime, 0f, 0f);
+        transform.position += new Vector3(Speed * 1f * Time.deltaTime, 0f, 0f);
+    }
+
+    public void Replay()
+    {
+        transform.position = StartPosObject.transform.position;
     }
 }

@@ -20,4 +20,12 @@ public class SceneInputs : MonoBehaviour
     {
         
     }
+
+    public void Reset()
+    {
+        Frequency = 400f;
+        CarSpeed = 14f;
+        AcousticWavePower = 100f;
+        AcousticWaveImpedance = 3000000f;
+    }
 }

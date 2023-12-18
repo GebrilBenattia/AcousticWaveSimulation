@@ -21,7 +21,6 @@ public class Observator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        wave.transform.position = transform.position;
-        wave.frequency = PerceivedFrequency;
+
     }
 }

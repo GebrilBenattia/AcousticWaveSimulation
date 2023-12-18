@@ -20,9 +20,6 @@ public class Simulation : MonoBehaviour
     void Start()
     {
         m_Car.Speed = m_Inputs.CarSpeed;
-        //m_Car.WaveTransmitter.WaveFrequency = m_Inputs.Frequency;
-        //m_Car.WaveTransmitter.WavePower = m_Inputs.AcousticWavePower;
-        //m_Car.WaveTransmitter.WaveImpedance = m_Inputs.AcousticWaveImpedance;
 
         m_Observators[0].LastDistanceFromVehicule = Vector3.Distance(m_Car.transform.position, m_Observators[0].transform.position);
     }
@@ -65,7 +62,8 @@ public class Simulation : MonoBehaviour
     {
         float CurrentDistance = Vector3.Distance(Observator.transform.position, Car.transform.position);
 
-        if (Observator.LastDistanceFromVehicule > CurrentDistance) {
+        if (CurrentDistance < Observator.LastDistanceFromVehicule) {
+            //Debug.Log("CLOSER");
             Observator.LastDistanceFromVehicule = CurrentDistance;
             return true;
         }
@@ -87,23 +85,13 @@ public class Simulation : MonoBehaviour
     {
         Transmission = GetTransmission();
 
+        m_Car.Speed = m_Inputs.CarSpeed;
+
         foreach (var observator in m_Observators)
         {
             GetVolume(observator);
             GetPerceivedFrequency(observator);
             GetPitchType(observator);
         }
-
-        //GetPerceivedFrequency(m_Observators[0]);
-        //GetPitchType(m_Observators[0]);
-
-        //if (m_Observators[0].IsLowPitched) {
-        //    Debug.Log(m_Observators[0].PerceivedFrequency);
-        //    Debug.Log("PLUS GRAVE");
-        //}
-        //else {
-        //    Debug.Log(m_Observators[0].PerceivedFrequency);
-        //    Debug.Log("PLUS AIGU");
-        //}
     }
 }

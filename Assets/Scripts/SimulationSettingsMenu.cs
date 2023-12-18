@@ -9,6 +9,11 @@ public class SimulationSettingsMenu : MonoBehaviour
     public GameObject[] ObservatorValues = null;
     public GameObject[] ObservatorValuesButton = null;
 
+    public Observator[] Observators = null;
+
+    private bool m_WasOutDoorValueOpen = false;
+    private bool m_WasInDoorValueOpen = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +29,13 @@ public class SimulationSettingsMenu : MonoBehaviour
     public void ShowSettingsMenu()
     {
         if (!SettingsMenuUI.activeSelf) {
-            foreach (var item in ObservatorValues) {
-                item.SetActive(false);
+            if (ObservatorValues[0].activeSelf) {
+                ObservatorValues[0].SetActive(false);
+                m_WasOutDoorValueOpen = true;
+            }
+            if (ObservatorValues[1].activeSelf) {
+                ObservatorValues[1].SetActive(false);
+                m_WasInDoorValueOpen = true;
             }
             foreach (var item in ObservatorValuesButton) {
                 item.SetActive(false);
@@ -37,9 +47,21 @@ public class SimulationSettingsMenu : MonoBehaviour
         }
 
         if (SettingsMenuUI.activeSelf) {
+            if (!Observators[0].InDoor) {
+                if (m_WasOutDoorValueOpen)
+                    ObservatorValues[0].SetActive(true);
+            }
+            if (Observators[1].InDoor) {
+                if (m_WasInDoorValueOpen)
+                    ObservatorValues[1].SetActive(true);
+            }
             foreach (var item in ObservatorValuesButton) {
                 item.SetActive(true);
             }
+
+            m_WasOutDoorValueOpen = false;
+            m_WasInDoorValueOpen = false;
+
             Time.timeScale = 1f;
             SettingsMenuUI.SetActive(false);
             return;
