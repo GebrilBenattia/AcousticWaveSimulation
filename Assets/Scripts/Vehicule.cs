@@ -7,7 +7,7 @@ public class Vehicule : MonoBehaviour
 {
     [HideInInspector] public float Speed = 0f;
     [SerializeField] public AcousticWaveTransmitter WaveTransmitter = null;
-    [SerializeField] private Light m_Light;
+    [SerializeField] private Light m_Light = null;
 
     public float minIntensity = 0f; 
     public float maxIntensity = 300f;
