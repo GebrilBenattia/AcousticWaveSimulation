@@ -32,7 +32,7 @@
 # OutDoor Observer Spec Button
 ![OutDoorObserverSpecButton](https://cdn.discordapp.com/attachments/1021002554194268180/1186337939626672128/image.png?ex=6592e24d&is=65806d4d&hm=d676e587923929d139c5faec024345180f2e40dc571157e1cfae4b930cddc6a4&)
 
-* To see this button hover the InDoor Observer.
+* To see this button hover the OutDoor Observer.
 * Click on this button to show/hide OutDoor Observer Spec.
 
 # OutDoor Observer Spec
@@ -51,7 +51,7 @@
 # InDoor Observer Spec Button
 ![InDoorObserverSpecButton](https://cdn.discordapp.com/attachments/1021002554194268180/1186337853249171598/image.png?ex=6592e239&is=65806d39&hm=c7b3b1f9895d0b72e8e891ceefd2c48af0c4656483e00b99cb5f06ee7e04541d&)
 
-* To see this button hover the OutDoor Observer.
+* To see this button hover the InDoor Observer.
 * Click on this button to show/hide InDoor Observer Spec.
 
 # InDoor Observer Spec
