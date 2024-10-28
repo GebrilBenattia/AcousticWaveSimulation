@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using UnityEngine;
 
 public class Simulation : MonoBehaviour
@@ -16,7 +13,6 @@ public class Simulation : MonoBehaviour
 
     private const float m_I0 = 1.1e-12f;
 
-    // Start is called before the first frame update
     void Start()
     {
         m_Car.Speed = m_Inputs.CarSpeed;
@@ -80,7 +76,6 @@ public class Simulation : MonoBehaviour
             Observator.IsLowPitched = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Transmission = GetTransmission();

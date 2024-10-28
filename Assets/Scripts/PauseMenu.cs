@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,12 +21,6 @@ public class PauseMenu : MonoBehaviour
     private bool m_WasOutDoorValueOpen = false;
     private bool m_WasInDoorValueOpen = false;
 
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {
@@ -48,9 +38,11 @@ public class PauseMenu : MonoBehaviour
         if (m_WasConfigOpen) {
             PauseMenuUI.SetActive(false);
             GameIsPaused = false;
+
             SimulationConfigMenuUI.SetActive(true);
             m_WasConfigOpen = false;
             SimulationConfigButton.SetActive(true);
+
             if (!Observators[0].InDoor) {
                 if (m_WasOutDoorValueOpen)
                     ObservatorValues[0].SetActive(true);

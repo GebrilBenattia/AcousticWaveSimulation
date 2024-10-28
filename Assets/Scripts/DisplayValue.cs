@@ -1,13 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class DisplayValue : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     public TextMeshProUGUI TextMeshPro = null;
 
     public Observator Observator = null;
@@ -35,12 +30,6 @@ public class DisplayValue : MonoBehaviour
     
     public Parameters ParametersToPrint = Parameters.Frequency;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         UpdateText();

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SimulationInputsConfig : MonoBehaviour
@@ -16,18 +13,6 @@ public class SimulationInputsConfig : MonoBehaviour
     bool m_CarSpeedIsApplied = true;
     bool m_WavePowerIsApplied = true;
     bool m_WaveImpedanceIsApplied = true;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void ApplyInputs()
     {

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SimulationSettingsMenu : MonoBehaviour
@@ -13,18 +11,6 @@ public class SimulationSettingsMenu : MonoBehaviour
 
     private bool m_WasOutDoorValueOpen = false;
     private bool m_WasInDoorValueOpen = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void ShowSettingsMenu()
     {
