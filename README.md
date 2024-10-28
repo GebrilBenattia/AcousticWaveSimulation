@@ -80,7 +80,7 @@ This was an academic project, completed in a group of two, to simulate and analy
 * Shows the current simulation values.
 
 # New Simulation Values
-![NewSimulationValues](Screenshots/AcousticWaveSimulation/SettingsMenu/NewValues.png)
+![NewSimulationValues](Screenshots/AcousticWaveSimulation/NewValues.png)
 
 * Enter a new input value (FLOAT) AND PRESS ENTER TO VALIDATE !!!
 
