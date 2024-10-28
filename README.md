@@ -17,7 +17,7 @@ This was an academic project, completed in a group of two, to simulate and analy
 
 
 ## Settings
-![Settings](Screenshots/AcousticWaveSimulation/)
+![Settings](Screenshots/AcousticWaveSimulation/SettingsMenu.png)
 
 
 ## Vehicule
@@ -90,7 +90,7 @@ This was an academic project, completed in a group of two, to simulate and analy
 * Here is an example of how it's looks when you change the inputs variables.
 
 # Reset Button
-![ResetButton](Screenshots/AcousticWaveSimulation/ResetButton)
+![ResetButton](Screenshots/AcousticWaveSimulation/ResetButton.png)
 
 * Click on this button to reset Simulation values back to default wich are :
 - 400 Hz
@@ -99,7 +99,7 @@ This was an academic project, completed in a group of two, to simulate and analy
 - 3 000 000 Pa s/m
 
 # Play Button
-![PlayButton](Screenshots/AcousticWaveSimulation/PlayButton)
+![PlayButton](Screenshots/AcousticWaveSimulation/PlayButton.png)
 
 * Click on this button to reset the vehicule position to the origin (does not cancel the pause state).
 
